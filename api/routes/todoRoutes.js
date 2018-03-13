@@ -4,7 +4,7 @@ module.exports = function(app){
     //routes
     app.route('/tasks')
         .get(todoList.List)
-        .post(todoList.Create);
+        .post(todoList.create);
 
 
     app.route('/tasks/:taskId')
