@@ -1,1 +1,3 @@
-./.idea
+./.idea/
+./db/
+./node_modules/

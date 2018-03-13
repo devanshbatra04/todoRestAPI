@@ -9,8 +9,9 @@ exports.List = function(req,res){
 };
 
 exports.create = function(req,res) {
-    Task.findById(req.params.taskId, function (err, task) {
-        if (err) res.send(err);
+    var new_Task = new Task(req.body);
+    new_Task.save(function(err,task){
+        if(err) res.send(err);
         else res.json(task);
     })
 };
